@@ -1,9 +1,8 @@
 This library provides a widget named `CustomAutoCompleteEditText`  that shows completion suggestions
-   automatically while the user is typing. The list of suggestions is displayed in a drop down menu from which the user can choose an 
-   item to replace the content of the edit box with.
+   automatically while the user is typing. The list of suggestions is fetched real time from a given URL and displayed in a drop down menu from which the user can choose an item to replace the content of the edit box with.
  
 
- The library includes following features and functionalities :
+**Features and functionalities**
  - Obtain list of suggestions from a given url
  - Support for multiple substrings separated with defined tokens
  - Cache the url responses automatically. Please note that the URL should return appropriate `cache-control` header for caching to work.
@@ -11,17 +10,17 @@ This library provides a widget named `CustomAutoCompleteEditText`  that shows co
     
     
    
-  To make the library more generic we have given following interfaces which you can implement accordingly : 
-- `ParsingListener` : Implement its `parseApiResponse` method with your own way of parsing api responses.
--  `URLQueryListener` : Use this interface to generate your own url queries .
+To make the library more generic we have given following interfaces which you can implement accordingly : 
+ - `ParsingListener` : Implement its `parseApiResponse` method with your own way of parsing api responses.
+ -  `URLQueryListener` : Use this interface to generate your own url queries .
 
  
- Provide these interfaces using the setter methods:
-  - `ParsingListener` : `setParsingListener(ParsingListener)`
-  - `URLQueryListener` : `setUrlQueryListener(URLQueryListener)`
-  - `Loading Indicator` : `setLoadingIndicator(Loading Indicator)`
+Provide these interfaces using the setter methods:
+ - `ParsingListener` : `setParsingListener(ParsingListener)`
+ - `URLQueryListener` : `setUrlQueryListener(URLQueryListener)`
+ - `Loading Indicator` : `setLoadingIndicator(Loading Indicator)`
 
- Custom Attributes which you have to define in layout xml while creating an CustomAutoCompleteEditText instance :
+Custom Attributes which you have to define in layout xml while creating an CustomAutoCompleteEditText instance :
   - `threshhold`:  The minimum no. of characters that should be typed to display list of suggestions.
   - `delayTime`: The time (in milliseconds) to wait before hitting the URL. This prevents overloading the backend when user types continuously.
   - `tag` : A unique identifier of your requests. Also, if you plug multiple such widgets on one screen, it is used to identify 
