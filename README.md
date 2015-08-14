@@ -5,16 +5,15 @@ This library provides a widget named `CustomAutoCompleteEditText`  that shows co
 **Features and functionalities**
  - Obtain list of suggestions from a given url
  - Support for multiple substrings separated with defined tokens
- - Cache the url responses automatically. This will prevent extra network calls. Please note that the responses should return appropriate `cache-control` header to enable caching.
+ - Cache the url responses automatically. This will prevent extra network calls. Please note that the responses should return appropriate `cache-control` header to enable caching
  - Invalidate cache even before the items have expired
  - Add delay time to wait before the network call is initiated
  - Show suggestions only if the user enters a string of some minimum length
     
     
-   
-To make the library more generic we have given following interfaces which you can implement accordingly : 
+Just implement the following interfaces as per your requirement,
  - `ParsingListener`: Implement its `parseApiResponse` method with your own way of parsing api responses
- -  `URLQueryListener`: Use this interface to generate your own url queries
+ - `URLQueryListener`: Use this interface to generate your own url queries
 
  
 Provide these interfaces using the setter methods:
