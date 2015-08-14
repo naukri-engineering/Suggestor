@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">SuggestorsWidget</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="designation">Designation</string>
+      <string name="designationHint">Enter Keywords</string>
+      <color name="autocompletet_background_color">#000000</color>
+      <string name="clear_cache">Clear Cache</string>
+       <string name="next">Next</string>
+      
+    
+
+</resources>
